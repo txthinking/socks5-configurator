@@ -1,0 +1,34 @@
+{
+    "name": "Socks5 Configurator",
+    "description": "Configure your Chrome with socks5 proxy",
+    "version": "2021.02.15",
+    "background": {
+        "service_worker": "background.js"
+    },
+    "permissions": [
+        "storage",
+        "proxy"
+    ],
+    "host_permissions": [
+        "http://*/*",
+        "https://*/*",
+        "<all_urls>"
+    ],
+    "action": {
+        "default_icon": {
+            "16": "/images/icon.16.png",
+            "32": "/images/icon.32.png",
+            "48": "/images/icon.48.png",
+            "128": "/images/icon.128.png"
+        }
+    },
+    "options_page": "options.html",
+    "icons": {
+        "16": "/images/icon.16.png",
+        "32": "/images/icon.32.png",
+        "48": "/images/icon.48.png",
+        "128": "/images/icon.128.png"
+    },
+    "manifest_version": 3
+}
+

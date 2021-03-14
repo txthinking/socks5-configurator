@@ -1,0 +1,37 @@
+wl-button {
+    --button-color: white;
+    --button-bg: black;
+}
+wl-progress-spinner{
+    --progress-spinner-buffer-color: black;
+    --progress-spinner-color: white;
+    --progress-spinner-size: 1rem;
+}
+wl-card{
+    padding: 20px;
+}
+wl-switch{
+    --switch-color-checked:black;
+}
+
+.column {
+    width: 30%;
+    display:flex;
+    flex-direction:column;
+}
+.row {
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+}
+.center {
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+}
+.container20{
+    height:20px;
+}
+.container30{
+    height:30px;
+}

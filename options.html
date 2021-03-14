@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+        <link rel="stylesheet" href="style.css">
+        <title>Socks5 Chrome</title>
+        <script src="weightless.min.js"></script>
+    </head>
+    <body>
+        <div class="container30"></div>
+        <div class="center">
+            <wl-card class="column">
+                <div class="row">
+                    <wl-title level="3">Socks5 Proxy</wl-title>
+                    <wl-switch checked id="socks5switch"></wl-switch>
+                </div>
+                <div class="container20"></div>
+                <wl-textfield id="socks5server" label="Example: 127.0.0.1:1080 or [::1]:1080"></wl-textfield>
+                <div class="container20"></div>
+            </wl-card>
+        </div>
+        <div class="container30"></div>
+        <div class="center">
+            <wl-card class="column">
+                <div class="row">
+                    <wl-title level="3">Bypass List</wl-title>
+                    <wl-switch checked id="bypassswitch"></wl-switch>
+                </div>
+                <div class="container20"></div>
+                <wl-textfield label="Example: https://txthinking.github.io/bypass/chinadomain.txt" id="bypassurl"></wl-textfield>
+                <div class="container20"></div>
+            </wl-card>
+        </div>
+        <div class="container30"></div>
+        <div class="center">
+            <wl-button id="save">Save</wl-button>
+            <wl-button id="ing"><wl-progress-spinner></wl-progress-spinner></wl-button>
+        </div>
+        <wl-dialog id="hey" fixed backdrop blockscrolling>
+            <div slot="content">
+                <wl-text id="girl"></wl-text>
+            </div>
+        </wl-dialog>
+        <script src="options.js"></script>
+    </body>
+</html>

@@ -22,9 +22,17 @@ chrome.storage.local.get('bypassswitch', s =>{
         document.querySelector('#bypassswitch').checked = false;
     }
 });
-chrome.storage.local.get('bypassurl', s =>{
-    s = s.bypassurl || 'https://txthinking.github.io/bypass/chinadomain.txt';
-    document.querySelector('#bypassurl').value = s;
+chrome.storage.local.get('bypassdomainurl', s =>{
+    s = s.bypassdomainurl || 'https://txthinking.github.io/bypass/chinadomain.txt';
+    document.querySelector('#bypassdomainurl').value = s;
+});
+chrome.storage.local.get('bypasscidr4url', s =>{
+    s = s.bypasscidr4url || 'https://txthinking.github.io/bypass/chinacidr4.txt';
+    document.querySelector('#bypasscidr4url').value = s;
+});
+chrome.storage.local.get('bypasscidr6url', s =>{
+    s = s.bypasscidr6url || 'https://txthinking.github.io/bypass/chinacidr6.txt';
+    document.querySelector('#bypasscidr6url').value = s;
 });
 
 document.querySelector('#save').addEventListener("click", async (e) => {
@@ -34,7 +42,9 @@ document.querySelector('#save').addEventListener("click", async (e) => {
     var socks5switch = document.querySelector('#socks5switch').checked;
     var socks5server = document.querySelector('#socks5server').value;
     var bypassswitch = document.querySelector('#bypassswitch').checked;
-    var bypassurl = document.querySelector('#bypassurl').value;
+    var bypassdomainurl = document.querySelector('#bypassdomainurl').value;
+    var bypasscidr4url = document.querySelector('#bypasscidr4url').value;
+    var bypasscidr6url = document.querySelector('#bypasscidr6url').value;
 
     if(socks5switch){
         if(!/.+:\d+/.test(socks5server)){
@@ -46,10 +56,20 @@ document.querySelector('#save').addEventListener("click", async (e) => {
     }
     chrome.storage.local.set({"socks5switch": socks5switch ? 'on' : 'off'});
     chrome.storage.local.set({"socks5server": socks5server});
-    var l = [];
+    var l = [
+		"10.0.0.0/8",
+		"127.0.0.0/8",
+		"169.254.0.0/16",
+		"172.16.0.0/12",
+		"192.168.0.0/16",
+		"224.0.0.0/4",
+        "<local>",
+        "<localhost>",
+        "*.local",
+	];
     if(bypassswitch){
         try{
-            var r = await fetch(bypassurl);
+            var r = await fetch(bypassdomainurl);
             if(r.status != 200){
                 throw Error(`When fetch bypass list: ${r.status}`);
             }
@@ -59,6 +79,24 @@ document.querySelector('#save').addEventListener("click", async (e) => {
                 l.push(v.trim());
                 l.push("*."+v.trim());
             });
+            var r = await fetch(bypasscidr4url);
+            if(r.status != 200){
+                throw Error(`When fetch bypass list: ${r.status}`);
+            }
+            var s = await r.text();
+            var l1 = s.trim().split('\n');
+            l1.forEach(v=>{
+                l.push(v.trim());
+            });
+            var r = await fetch(bypasscidr6url);
+            if(r.status != 200){
+                throw Error(`When fetch bypass list: ${r.status}`);
+            }
+            var s = await r.text();
+            var l1 = s.trim().split('\n');
+            l1.forEach(v=>{
+                l.push(v.trim());
+            });
         }catch(e){
             alert(`When fetch bypass list: ${e.message}`);
             document.querySelector('#save').style.display = 'block';
@@ -67,8 +105,9 @@ document.querySelector('#save').addEventListener("click", async (e) => {
         }
     }
     chrome.storage.local.set({"bypassswitch": bypassswitch ? 'on' : 'off'});
-    chrome.storage.local.set({"bypassurl": bypassurl});
-    chrome.storage.local.set({"bypasslist": JSON.stringify(l)});
+    chrome.storage.local.set({"bypassdomainurl": bypassdomainurl});
+    chrome.storage.local.set({"bypasscidr4url": bypasscidr4url});
+    chrome.storage.local.set({"bypasscidr6url": bypasscidr6url});
 
     if(!socks5switch){
         chrome.proxy.settings.set({

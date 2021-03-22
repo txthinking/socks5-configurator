@@ -28,7 +28,11 @@
                     <wl-switch checked id="bypassswitch"></wl-switch>
                 </div>
                 <div class="container20"></div>
-                <wl-textfield label="Example: https://txthinking.github.io/bypass/chinadomain.txt" id="bypassurl"></wl-textfield>
+                <wl-textfield label="Domain list, example: https://txthinking.github.io/bypass/chinadomain.txt" id="bypassdomainurl"></wl-textfield>
+                <div class="container20"></div>
+                <wl-textfield label="CIDR4 list, example: https://txthinking.github.io/bypass/chinacidr4.txt" id="bypasscidr4url"></wl-textfield>
+                <div class="container20"></div>
+                <wl-textfield label="CIDR6 list, example: https://txthinking.github.io/bypass/chinacidr6.txt" id="bypasscidr6url"></wl-textfield>
                 <div class="container20"></div>
             </wl-card>
         </div>
@@ -37,11 +41,6 @@
             <wl-button id="save">Save</wl-button>
             <wl-button id="ing"><wl-progress-spinner></wl-progress-spinner></wl-button>
         </div>
-        <wl-dialog id="hey" fixed backdrop blockscrolling>
-            <div slot="content">
-                <wl-text id="girl"></wl-text>
-            </div>
-        </wl-dialog>
         <script src="options.js"></script>
     </body>
 </html>

@@ -1,7 +1,8 @@
 {
     "name": "Socks5 Configurator",
-    "description": "Configure your Chrome with socks5 proxy",
-    "version": "2021.02.15",
+    "description": "Configure your browser with socks5 proxy",
+    "homepage_url": "https://github.com/txthinking/socks5-configurator",
+    "version": "2021.02.14",
     "background": {
         "service_worker": "background.js"
     },

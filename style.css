@@ -1,3 +1,17 @@
+body{
+    margin:0;
+    background-color:#f0f2f5;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+wl-card{
+    padding: 30px;
+    --card-elevation: 0;
+}
+a,a:link,a:visited,a:hover,a:active{
+    color:inherit;
+}
 wl-button {
     --button-color: white;
     --button-bg: black;
@@ -6,9 +20,6 @@ wl-progress-spinner{
     --progress-spinner-buffer-color: black;
     --progress-spinner-color: white;
     --progress-spinner-size: 1rem;
-}
-wl-card{
-    padding: 20px;
 }
 wl-switch{
     --switch-color-checked:black;
@@ -35,3 +46,16 @@ wl-switch{
 .container30{
     height:30px;
 }
+.footer{
+display:flex;flex-direction:row;background-color:white;justify-content:space-between;margin-top:auto;padding:20px;
+}
+.footer1{
+display:flex;width:100%;flex-direction:row;justify-content:space-between;align-items:flex-start;flex-wrap: wrap;
+}
+.footer wl-button{
+color:black;text-transform:none;
+}
+.footer wl-text{
+color:#919191;margin-top:10px;
+}
+

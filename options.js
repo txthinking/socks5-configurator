@@ -112,7 +112,7 @@ document.querySelector('#save').addEventListener("click", async (e) => {
     if(!socks5switch){
         chrome.proxy.settings.set({
             value: {
-                mode: "direct",
+                mode: "system",
             },
         },()=>{
             setTimeout(()=>{

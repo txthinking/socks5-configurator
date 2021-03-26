@@ -4,7 +4,7 @@ Configure your Chrome with socks5 proxy
 
 ## Install
 
-https://chrome.google.com/webstore/detail/hnpgnjkeaobghpjjhaiemlahikgmnghb
+[Chrome Web Store](https://chrome.google.com/webstore/detail/hnpgnjkeaobghpjjhaiemlahikgmnghb)
 
 ## Author
 

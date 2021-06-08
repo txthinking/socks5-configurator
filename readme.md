@@ -2,7 +2,7 @@
 
 Configure your Chrome with socks5 proxy
 
-A project by [txthinking.com](https://www.txthinking.com)
+❤️ A project by [txthinking.com](https://www.txthinking.com)
 
 ## Install
 

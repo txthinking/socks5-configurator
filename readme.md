@@ -2,13 +2,11 @@
 
 Configure your Chrome with socks5 proxy
 
+A project by [txthinking.com](https://www.txthinking.com)
+
 ## Install
 
 [Chrome Web Store](https://chrome.google.com/webstore/detail/hnpgnjkeaobghpjjhaiemlahikgmnghb)
-
-## Author
-
-A project by [txthinking](https://www.txthinking.com)
 
 ## License
 

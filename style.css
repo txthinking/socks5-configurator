@@ -5,6 +5,12 @@ body{
     min-height: 100vh;
     flex-direction: column;
 }
+.hey {
+    --card-elevation: rgb(95, 206, 174) 0px 6px 12px;
+}
+.red {
+    color: red;
+}
 wl-card{
     padding: 30px;
     --card-elevation: 0;

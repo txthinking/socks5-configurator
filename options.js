@@ -1,5 +1,13 @@
 document.querySelector('#ing').style.display='none';
 
+if(navigator.language.toLowerCase().startsWith("zh-")){
+    document.querySelector('#brook').style.display = 'none';
+    document.querySelector('#shiliew').style.display = 'none';
+}else{
+    document.querySelector('#brookzh').style.display = 'none';
+    document.querySelector('#shiliewzh').style.display = 'none';
+}
+
 chrome.storage.local.get('socks5switch', s => {
     s = s.socks5switch || 'on';
     if(s == "on"){
@@ -23,15 +31,15 @@ chrome.storage.local.get('bypassswitch', s =>{
     }
 });
 chrome.storage.local.get('bypassdomainurl', s =>{
-    s = s.bypassdomainurl || 'https://txthinking.github.io/bypass/chinadomain.txt';
+    s = s.bypassdomainurl || 'https://txthinking.github.io/bypass/china_domain.txt';
     document.querySelector('#bypassdomainurl').value = s;
 });
 chrome.storage.local.get('bypasscidr4url', s =>{
-    s = s.bypasscidr4url || 'https://txthinking.github.io/bypass/chinacidr4.txt';
+    s = s.bypasscidr4url || 'https://txthinking.github.io/bypass/china_cidr4.txt';
     document.querySelector('#bypasscidr4url').value = s;
 });
 chrome.storage.local.get('bypasscidr6url', s =>{
-    s = s.bypasscidr6url || 'https://txthinking.github.io/bypass/chinacidr6.txt';
+    s = s.bypasscidr6url || 'https://txthinking.github.io/bypass/china_cidr6.txt';
     document.querySelector('#bypasscidr6url').value = s;
 });
 

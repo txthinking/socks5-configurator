@@ -2,7 +2,7 @@
     "name": "Socks5 Configurator",
     "description": "Configure your browser with socks5 proxy",
     "homepage_url": "https://www.txthinking.com",
-    "version": "2023.05.21",
+    "version": "2023.6.12",
     "background": {
         "service_worker": "background.js"
     },

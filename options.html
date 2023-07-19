@@ -3,19 +3,12 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+        <script src="weightless.min.js"></script>
         <link rel="stylesheet" href="style.css">
         <title>Socks5 Chrome</title>
-        <script src="weightless.min.js"></script>
     </head>
     <body>
-        <div class="container30"></div>
-        <div class="center">
-            <wl-card class="column hey">
-                <wl-title level="3" id="brook"><a href="https://github.com/txthinking/brook#readme">Brook: A cross-platform <mark>Programmable</mark> network tool</a></wl-title>
-                <wl-title level="3" id="brookzh"><a href="https://github.com/txthinking/brook#readme">Brook: 一个跨平台<mark>可编程</mark>网络工具</a></wl-title>
-            </wl-card>
-        </div>
-        <div class="container30"></div>
+        <div class="container20"></div>
         <div class="center">
             <wl-card class="column">
                 <div class="row">
@@ -24,41 +17,43 @@
                 </div>
                 <div class="container20"></div>
                 <wl-textfield id="socks5server" label="Example: 127.0.0.1:1080 or [::1]:1080"></wl-textfield>
-                <div class="container20"></div>
             </wl-card>
         </div>
-        <div class="container30"></div>
+        <div class="container20"></div>
         <div class="center">
             <wl-card class="column">
                 <div class="row">
-                    <wl-title level="3">Bypass List</wl-title>
+                    <wl-title level="3"><a href="https://github.com/txthinking/bypass/blob/master/china_domain.txt">Bypass List</a></wl-title>
                     <wl-switch checked id="bypassswitch"></wl-switch>
                 </div>
                 <div class="container20"></div>
-                <wl-textfield label="Domain list, example: https://txthinking.github.io/bypass/china_domain.txt" id="bypassdomainurl"></wl-textfield>
-                <div class="container20"></div>
-                <wl-textfield label="CIDR4 list, example: https://txthinking.github.io/bypass/china_cidr4.txt" id="bypasscidr4url"></wl-textfield>
-                <div class="container20"></div>
-                <wl-textfield label="CIDR6 list, example: https://txthinking.github.io/bypass/china_cidr6.txt" id="bypasscidr6url"></wl-textfield>
-                <div class="container20"></div>
+                <wl-textarea id="bypassdomain" class="bypassdomain" rows="100"></wl-textarea>
             </wl-card>
         </div>
-        <div class="container30"></div>
-        <div class="center">
-            <wl-card class="column hey">
-                <wl-title level="3" id="shiliew"><a href="https://www.txthinking.com/shiliew.html">Shiliew: China Optimized VPN</a></wl-title>
-                <wl-title level="3" id="shiliewzh"><a href="https://www.txthinking.com/shiliew.html">Shiliew VPN - <mark>专注稳定</mark>为在乎精力的人而设计</a></wl-title>
-            </wl-card>
-        </div>
-        <div class="container30"></div>
+        <div class="container20"></div>
         <div class="center">
             <wl-button id="save">Save</wl-button>
             <wl-button id="ing"><wl-progress-spinner></wl-progress-spinner></wl-button>
         </div>
+        <div class="container20"></div>
+        <div class="center">
+            <wl-card class="column hey">
+                <wl-title level="3" id="brook">If you don't have a socks5 proxy, you can deploy one with <a href="https://github.com/txthinking/brook#readme">Brook</a></wl-title>
+                <wl-title level="3" id="brookzh">如果你没有 socks5 proxy，你可以用 <a href="https://github.com/txthinking/brook#readme">Brook</a> 部署一个</wl-title>
+            </wl-card>
+        </div>
+        <div class="container20"></div>
+        <div class="center">
+            <wl-card class="column hey">
+                <wl-title level="3" id="shiliew">If you can't or don't want to deploy yourself, you can choose <a href="https://www.txthinking.com/shiliew.html">Shiliew</a></wl-title>
+                <wl-title level="3" id="shiliewzh">如果你不愿或不会部署，你也可以选择 <a href="https://www.txthinking.com/shiliew.html">Shiliew</a></wl-title>
+            </wl-card>
+        </div>
+        <div class="container20"></div>
         <div class="footer">
             <div class="footer1">
-                <wl-button flat inverted>A project by&nbsp;<a href="https://www.txthinking.com">txthinking</a></wl-button>
                 <wl-text></wl-text>
+                <wl-button flat inverted>A project by&nbsp;<a href="https://www.txthinking.com">txthinking</a></wl-button>
             </div>
         </div>
         <script src="options.js"></script>

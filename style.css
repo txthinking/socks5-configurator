@@ -11,6 +11,9 @@ body{
 .red {
     color: red;
 }
+.bypassdomain {
+    --textarea-min-height: 100px;
+}
 wl-card{
     padding: 30px;
     --card-elevation: 0;
